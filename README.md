@@ -220,5 +220,6 @@ Feedstock Maintainers
 =====================
 
 * [@NingWang1990](https://github.com/NingWang1990/)
+* [@freyso](https://github.com/freyso/)
 * [@jan-janssen](https://github.com/jan-janssen/)
 
