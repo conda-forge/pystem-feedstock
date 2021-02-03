@@ -27,7 +27,7 @@ requirements:
     - fftw
     - numpy
   run:
-    - python <3.9
+    - python
     - {{ pin_compatible('numpy') }}
     - scipy >=1.2.0
     - scikit-learn >=0.21.0
