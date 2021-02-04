@@ -1,5 +1,5 @@
 {% set name = "pystem" %}
-{% set version = "0.0.22" %}
+{% set version = "0.0.25" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 85715775010894888ee972d58bb92bbd2e1f58fd340efe94d604d2933758cb1e
+  sha256: c535c1558c1ead5b81bae3735675557dbf014dd69db9f2924e2c0f9e7b228a0a
 
 build:
-  number: 5
+  number: 0
   skip: true  # [win]
+  skip: true  # [py>38]
+  skip: true  # [python_impl == 'pypy']
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -30,7 +32,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - scipy >=1.2.0
     - scikit-learn >=0.21.0
-
+    - numba
 test:
   imports:
     - pystem
