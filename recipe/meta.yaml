@@ -1,5 +1,5 @@
 {% set name = "pystem" %}
-{% set version = "0.0.25" %}
+{% set version = "0.0.26" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c535c1558c1ead5b81bae3735675557dbf014dd69db9f2924e2c0f9e7b228a0a
+  sha256: ebf4ff0456e2e27a04a939bd457b8aea8a851e139303ebd05fa276c1f94f30dd
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win or python_impl == 'pypy']
   script: {{ PYTHON }} -m pip install . -vv
 
